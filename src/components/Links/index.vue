@@ -4,7 +4,7 @@
       <Icon size="20">
         <Link />
       </Icon>
-      <span class="title">网站列表</span>
+      <span class="title">网站地图</span>
     </div>
     <el-row class="link-all" :gutter="20">
       <el-col
@@ -46,32 +46,17 @@ let linksData = [
   {
     icon: Blog,
     name: "博客",
-    link: "https://blog.imsyy.top/",
+    link: "https://blog.longli.space/",
   },
   {
     icon: Cloud,
     name: "网盘",
-    link: "https://pan.imsyy.top/",
-  },
-  {
-    icon: CompactDisc,
-    name: "音乐",
-    link: "https://music.imsyy.top/",
+    link: "https://space.longli.space/",
   },
   {
     icon: Compass,
-    name: "起始页",
-    link: "https://nav.imsyy.top/",
-  },
-  {
-    icon: Book,
-    name: "网址集",
-    link: "https://web.imsyy.top/",
-  },
-  {
-    icon: Flask,
-    name: "实验室",
-    link: "https://lab.imsyy.top/",
+    name: "FODI",
+    link: "https://fodi.longli.space/",
   },
 ];
 
