@@ -2,8 +2,8 @@
   <footer>
     <div class="power" v-show="!store.playerState">
       <span
-        >Copyright&nbsp;&copy;&nbsp;{{ fullYear }}
-        <a href="https://longli.space">longli</a>
+        >&nbsp;&copy;&nbsp;{{ fullYear }}
+        <a href="https://longli.space">Longli's Space</a>
       </span>
      
     </div>
