@@ -44,14 +44,11 @@ import cursorInit from "@/utils/cursor.js";
 import config from "@/../package.json";
 // 新春灯笼
 // import "@/utils/lantern.js";
-
 const store = mainStore();
-
 // 页面宽度
 const getWidth = () => {
   store.setInnerWidth(window.innerWidth);
 };
-
 onMounted(() => {
   // 自定义鼠标
   cursorInit();
@@ -68,7 +65,6 @@ onMounted(() => {
     let loadingBox = document.getElementById("loading-box");
     loadingBox.classList.add("loaded");
   });
-
   // 屏蔽右键
   document.oncontextmenu = () => {
     ElMessage({
@@ -78,7 +74,6 @@ onMounted(() => {
     });
     return false;
   };
-
   // 鼠标中键事件
   window.addEventListener("mousedown", (event) => {
     if (event.button == 1) {
@@ -90,26 +85,21 @@ onMounted(() => {
       }
     }
   });
-
   // 监听当前页面宽度
   getWidth();
   window.addEventListener("resize", getWidth);
-
   // 控制台输出
   let styleTitle1 = "font-size: 20px;font-weight: 600;color: rgb(244,167,89);";
   let styleTitle2 = "font-size:12px;color: rgb(244,167,89);";
   let styleContent = "color: rgb(30,152,255);";
   let title1 = "Longli's Space";
   let title2 = `
-
- __        ______   .__   __.   _______  __       __  
-|  |      /  __  \  |  \ |  |  /  _____||  |     |  | 
-|  |     |  |  |  | |   \|  | |  |  __  |  |     |  | 
-|  |     |  |  |  | |  . `  | |  | |_ | |  |     |  | 
-|  `----.|  `--'  | |  |\   | |  |__| | |  `----.|  | 
-|_______| \______/  |__| \__|  \______| |_______||__| 
-
-;
+ _____ __  __  _______     ____     __
+|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
+  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
+  | | | |\\/| |\\___ \\  \\   /    \\   /  
+ _| |_| |  | |____) |  | |      | |   
+|_____|_|  |_|_____/   |_|      |_|`;
   let content = `\n\n版本: ${config.version}\n主页: ${config.home}\nGithub: ${config.github}`;
   console.info(
     `%c${title1} %c${title2} %c${content}`,
@@ -118,7 +108,6 @@ onMounted(() => {
     styleContent
   );
 });
-
 // 监听宽度变化
 watch(
   () => store.innerWidth,
@@ -128,7 +117,6 @@ watch(
     }
   }
 );
-
 onBeforeUnmount(() => {
   window.removeEventListener("resize", getWidth);
 });
@@ -191,7 +179,6 @@ main {
     }
   }
 }
-
 // 加载动画层
 .animate {
   transform: scale(1);
@@ -201,7 +188,6 @@ main {
   width: 100%;
   height: 100%;
 }
-
 .loading {
   .animate {
     transform: scale(1.2);
